@@ -1,0 +1,23 @@
+{
+  "name": "09-module-challenge",
+  "version": "1.0.0",
+  "description": "README generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Josejpd3/09-Module-Challenge.git"
+  },
+  "keywords": [
+    "README",
+    "Generator"
+  ],
+  "author": "Josejpd3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Josejpd3/09-Module-Challenge/issues"
+  },
+  "homepage": "https://github.com/Josejpd3/09-Module-Challenge#readme"
+}
