@@ -1,7 +1,8 @@
+// Required Modules
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-// TODO: Create an array of questions for user input
+// Prompts
 inquirer
     .prompt([
         {
@@ -55,7 +56,7 @@ inquirer
     ])
     .then((data) => {
         console.log("Generating README...")
-        console.log(data.projectName)
+// README Formatting
         let readmeContent = `# ${data.projectName}
 ![license](https://img.shields.io/badge/license-${data.license}-blue)
 
@@ -92,7 +93,7 @@ To run tests, run the following command:<br>
 ## Questions
 If you have any questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at [${data.username}](https://github.com/${data.username})
 `;
-
+// Creating README and adding the readmeContent content
         fs.writeFile("README.md", readmeContent, (err) =>
         err ? console.log(err) : console.log("Success!")
         );
