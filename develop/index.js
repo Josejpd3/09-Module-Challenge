@@ -28,7 +28,7 @@ inquirer
             type: "list",
             name: "license",
             message: "What kind of license should your project have?",
-            choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"]
+            choices: ["MIT", "APACHE2.0", "GPL3.0", "BSD3", "None"]
         },
         {
             type: "input",
@@ -55,22 +55,45 @@ inquirer
     ])
     .then((data) => {
         console.log("Generating README...")
-        let readmeContent = 
-        `
+        console.log(data.projectName)
+        let readmeContent = `# ${data.projectName}
+![license](https://img.shields.io/badge/license-${data.license}-blue)
 
-        `
+## Description
+${data.desc}
+
+## Table of Contents
+
+* [Installation](#installation)
+
+* [Usage](#usage)
+
+* [License](#license)
+
+* [Contributing](#contributing)
+
+* [Tests](#tests)
+
+* [Questions](#questions)
+
+
+## Installation
+To install necessary dependecies, run the following command:<br>
+<mark>${data.install}</mark>
+## Usage
+${data.use}
+## License
+This project is licensed under the ${data.license} license
+## Contributing
+${data.contribute}
+## Tests
+To run tests, run the following command:<br>
+<mark>${data.tests}</mark>
+## Questions
+If you have any questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at [${data.username}](https://github.com/${data.username})
+`;
 
         fs.writeFile("README.md", readmeContent, (err) =>
         err ? console.log(err) : console.log("Success!")
         );
     });
-
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
