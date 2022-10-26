@@ -40,3 +40,7 @@ node index.js
 - What does the user need to know about contributing to the repo?
 
 After Completing these steps your README.md file will be generated inside the develop folder.
+
+## Example README
+
+![Example generated README](./develop/imgs/test-generated-readme.jpg)
